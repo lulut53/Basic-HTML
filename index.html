@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Halaman sendiri</title>
+ <!-- <script src="lib/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Mencoba Sesuatu',
+                },
+                beforeCreate () {
+                    console.log('before create: '+
+                    'message = ' + this.message)
+                },
+                create () {
+                    console.log('created: '+
+                    'message =' + this.message)
+                },
+            });
+    </script>
+<!--    <h1>hello</h1>
+    <p>lagicoba</p> -->
+</body>
+</html>
+
